@@ -1,0 +1,313 @@
+archetype (adl_version=1.4)
+    openEHR-EHR-ACTION.maternal_care.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"">
+    >
+    lifecycle_state = <"0">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+
+definition
+    ACTION[at0000] matches {
+        ism_transition matches {
+            ISM_TRANSITION[at0002] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::526]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0002]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0003] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::527]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0003]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0007] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::528]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0007]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0004] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::529]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0004]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0005] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::245]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0005]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0006] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::530]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0006]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0008] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::531]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0008]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0009] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::532]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0009]
+                        }
+                    }
+                }
+            }
+        }
+        description matches {
+            allow_archetype ITEM_TREE matches {
+                include
+                    archetype_id/value matches {/openEHR-EHR-ITEM_TREE\.maternal_care_description\.v0/}
+                exclude
+                    archetype_id/value matches {/.*/}
+            }
+        }
+    }
+
+ontology
+    terminologies_available = <"en", "fi", "sv", ...>
+    term_definitions = <
+        ["en"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Maternal care">
+                    description = <"unknown">
+
+                >
+                ["at0002"] = <
+                    text = <"Planned">
+                    description = <"This is a state descripition">
+
+                >
+                ["at0003"] = <
+                    text = <"Postponed">
+                    description = <"This is a state descripition">
+
+                >
+                ["at0004"] = <
+                    text = <"Scheduled">
+                    description = <"This is a state descripition">
+
+                >
+                ["at0005"] = <
+                    text = <"Active">
+                    description = <"This is a state descripition">
+
+                >
+                ["at0006"] = <
+                    text = <"Suspended">
+                    description = <"This is a state descripition">
+
+                >
+                ["at0007"] = <
+                    text = <"Cancelled">
+                    description = <"This is a state descripition">
+
+                >
+                ["at0008"] = <
+                    text = <"Aborted">
+                    description = <"This is a state descripition">
+
+                >
+                ["at0009"] = <
+                    text = <"Completed">
+                    description = <"This is a state descripition">
+
+                >
+            >
+        >
+        ["fi"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"*Maternal care(en)">
+                    description = <"*unknown(en)">
+
+                >
+                ["at0002"] = <
+                    text = <"*Planned(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0003"] = <
+                    text = <"*Postponed(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0004"] = <
+                    text = <"*Scheduled(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0005"] = <
+                    text = <"*Active(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0006"] = <
+                    text = <"*Suspended(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0007"] = <
+                    text = <"*Cancelled(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0008"] = <
+                    text = <"*Aborted(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0009"] = <
+                    text = <"*Completed(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+            >
+        >
+        ["sv"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"*Maternal care(en)">
+                    description = <"*unknown(en)">
+
+                >
+                ["at0002"] = <
+                    text = <"*Planned(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0003"] = <
+                    text = <"*Postponed(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0004"] = <
+                    text = <"*Scheduled(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0005"] = <
+                    text = <"*Active(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0006"] = <
+                    text = <"*Suspended(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0007"] = <
+                    text = <"*Cancelled(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0008"] = <
+                    text = <"*Aborted(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+                ["at0009"] = <
+                    text = <"*Completed(en)">
+                    description = <"*This is a state descripition(en)">
+
+                >
+            >
+        >
+    >
